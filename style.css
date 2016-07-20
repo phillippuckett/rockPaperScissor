@@ -1,25 +1,22 @@
-html { padding: 0 ; margin: 0; background-image: url('media/dojo.jpeg'); background-size: cover;}
-body { 
-    padding: 0; margin: 2.5vh 12.5vw; 
-    border: 1px solid black;
-    height: 93.75vh;
-}
+html { padding: 0 ; margin: 0; background-image: url('media/dojo.jpeg'); background-size: 100%; background-repeat: none; }
+body { padding: 0; margin: 0; }
 
 .hide {
     display: none;
 }
 
 .title {
-    padding: 0; margin: 0;
+    padding: 0; margin: 2.5vh 0;
+    color: red;
     border:1px solid green;
     text-align: center;
     font-size: 10vh;
 }
 
-.button {
+button.button {
     border:1px solid red;
     width: 100%;
-    padding: 1.25vh; margin: 2.5vh 0;
+    padding: 1.25vh; margin: 2.5vh auto;
     font-size: 7.5vh;
     text-align: center;
 }
@@ -31,9 +28,9 @@ body {
 
 .player {
     border: 1px solid blue;
-    padding: 0; margin: 2.5vh;
-    height: 50vh;
-    width: 25vh;
+    padding: 0; margin: 0;
+    height: 55vh;
+    width: 35vh;
 }
 
 .playerText {
@@ -45,7 +42,7 @@ body {
 
 .canvas {
     border: 1px solid gold;
-    padding: 0; margin: 2.5vh auto;
-    height: 50vh;
-    width: 50vh;
+    padding: 0; margin: 5vh 0;
+    height: 55vh;
+    width: 82.5vh;
 }
