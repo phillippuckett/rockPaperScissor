@@ -4,12 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissor</title>
+
+    <!--STYLEs-->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="view" id="page1">
+        <h6 class="title">ROCK , PAPER , SCISSORS</h6>
+        <button id="showPage2Btn" class="button" data-launch-view="page2">GO</button>
+    </div>
 
-    <script src="game.js"></script>
+    <div class="view hide" id="page2">
+        <h6 class="title">FWAH!</h6>
+        <div class="canvas"></div>
+        <button id="showPage1Btn" class="button" data-launch-view="page1">Back to title screen</button>
+    </div>
+
+
+
+    <!--CDNs-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+        crossorigin="anonymous"></script>
+
+
+    <!--SCRIPTs-->
+    <script src="js/game.js"></script>
+    <script src="js/views.js"></script>
 </body>
 
 </html>
