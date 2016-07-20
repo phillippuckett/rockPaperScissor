@@ -19,8 +19,28 @@ body {
 
 .button {
     border:1px solid red;
-    padding: 1.25vh; margin: 2.5vh auto;
+    width: 100%;
+    padding: 1.25vh; margin: 2.5vh 0;
     font-size: 7.5vh;
+    text-align: center;
+}
+.button:hover{ color: yellow; }
+
+.column {
+    display: inline-flex;
+}
+
+.player {
+    border: 1px solid blue;
+    padding: 0; margin: 2.5vh;
+    height: 50vh;
+    width: 25vh;
+}
+
+.playerText {
+    border-bottom:1px solid black;
+    padding: 0; margin: 2.5vh;
+    font-size: 5vh;
     text-align: center;
 }
 
