@@ -11,33 +11,30 @@
 
 <body>
     <div class="view" id="page1">
-        <h6 class="title">ROCK , PAPER , SCISSORS</h6>
-        <button id="showPage2Btn" class="button" data-launch-view="page2">GO</button>
+        <h6 class="title">ROCK · PAPER · SCISSORS</h6>
+        <div id="showPage2Btn" class="button" data-launch-view="page2">BEGIN</div>
     </div>
 
     <div class="view hide" id="page2">
         <h6 class="title">FWAH!</h6>
-        <div class="column">
-        <div class="player">
-            <h6 class="playerText">You</h6>
+        <div class="columnize">
+            <div class="player">
+                <h6 class="playerText">You</h6>
+            </div>
+            <div class="canvas"></div>
+            <div class="player">
+                <h6 class="playerText">Computer</h6>
+            </div>
         </div>
-        <div class="canvas"></div>
-        <div class="player">
-            <h6 class="playerText">Computer</h6>
-        </div>
-        </div>
-        <button id="showPage1Btn" class="button" data-launch-view="page1">Back to title screen</button>
+        <div id="showPage1Btn" class="button" data-launch-view="page1">END</div>
     </div>
 
 
 
-    <!--CDNs-->
+    <!--CDN / SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
         crossorigin="anonymous"></script>
-
-
-    <!--SCRIPTs-->
-    <script src="controller.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

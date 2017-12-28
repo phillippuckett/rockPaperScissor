@@ -1,48 +1,68 @@
-html { padding: 0 ; margin: 0; background-image: url('media/dojo.jpeg'); background-size: 100%; background-repeat: none; }
-body { padding: 0; margin: 0; }
+html { 
+    padding:0; 
+    margin:0; 
+    background-image:url('media/dojo.jpeg'); 
+    background-size:100%; 
+    background-repeat:none; 
+    /* border:5px dashed white; */
+}
+
+body {
+    padding:0; 
+    margin:0; 
+    /* border: 5px dashed blue; */
+}
 
 .hide {
     display: none;
 }
 
 .title {
-    padding: 0; margin: 2.5vh 0;
+    padding: 2.5% 0; margin: 0;
     color: red;
-    border:1px solid green;
+    border:5px solid green;
     text-align: center;
     font-size: 10vh;
 }
 
-button.button {
-    border:1px solid red;
-    width: 100%;
-    padding: 1.25vh; margin: 2.5vh auto;
+.button {
+    border:5px solid red;
+    display:flex;
+    justify-content:center;
+    padding:0; 
+    margin:auto;
     font-size: 7.5vh;
-    text-align: center;
+    text-align:center;
 }
-.button:hover{ color: yellow; }
-
-.column {
-    display: inline-flex;
+.button:hover{ 
+    color: yellow; 
 }
 
+.columnize {
+    display: flex;
+    justify-content:space-between;
+}
 .player {
-    border: 1px solid blue;
-    padding: 0; margin: 0;
+    border: 5px solid blue;
+    padding: 0; 
+    margin: 0;
     height: 55vh;
-    width: 35vh;
+    width: 25%;
+    float: center;
 }
 
 .playerText {
-    border-bottom:1px solid black;
-    padding: 0; margin: 2.5vh;
+    padding:2.5%; 
+    margin:0;
     font-size: 5vh;
     text-align: center;
+    border: 5px dashed yellow;
 }
 
 .canvas {
-    border: 1px solid gold;
-    padding: 0; margin: 5vh 0;
+    border: 5px solid purple; 
+    padding: 0; 
+    margin:0;
     height: 55vh;
-    width: 82.5vh;
+    width: 50%;
 }
