@@ -40,23 +40,23 @@ var compare = function (userChoice, computerChoice) {
     
     else if (userChoice === "rock") {
         if (computerChoice === "scissors") {
-            return "rock wins";
+            prompt("rock wins");
             }
         else {
-            return "paper wins";
+            prompt("paper wins");
             }
     }
     
     else if (userChoice === computerChoice) {
         if (choice2 === "rock") {
-            return "paper wins";
+            prompt("paper wins");
         }
         else {
-            return "scissors win";    
+            prompt("scissors win");    
         }
     }
     else {
-        return "not a valid weapon of choice";
+        prompt("not a valid weapon of choice");
     }
 };
 console.log("The computer chose " + computerChoice + " and ");
