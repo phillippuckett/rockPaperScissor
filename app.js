@@ -2,76 +2,68 @@
 // VIEWS //
 $(document).ready(function (e) {
 
-        function showView(viewName) {
-            $('.view').hide();
-    $('#' + viewName).show();
+    function showView(viewName) {
+        $('.view').hide();
+        $('#' + viewName).show();
     }
 
-        $('[data-launch-view]').click(function (e) {
-            e.preventDefault();
-            var viewName = $(this).attr('data-launch-view');
-            showView(viewName);
-        });
-
+    $('[data-launch-view]').click(function (e) {
+        e.preventDefault();
+        var viewName = $(this).attr('data-launch-view');
+        showView(viewName);
     });
+
+});
 // VIEWS //
 
 
 
 // GAME //
-// var userChoice = prompt("Do you choose rock, paper or scissors?");
 
-// make this a button choice instead ^^
+var rock;
+var paper;
+var scissors;
 
-var computerChoice = Math.random();
-if (computerChoice < 0.34) {
-	computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-	computerChoice = "paper";
-} else {
-	computerChoice = "scissors";
-} 
+var computerChoiceFn = function () {
+    var computerChoice = Math.random(0, 1);
+    // console.log("The computer chose the number " + computerChoice);
 
-var compare = function (userChoice, computerChoice) {
-    
-    if (userChoice === computerChoice) {
-        return  "The result is a tie!"
-    }  
-    
-    else if (userChoice === "rock") {
-        if (computerChoice === "scissors") {
-            prompt("rock wins");
-            }
-        else {
-            prompt("paper wins");
-            }
-    }
-    
-    else if (userChoice === computerChoice) {
-        if (choice2 === "rock") {
-            prompt("paper wins");
-        }
-        else {
-            prompt("scissors win");    
-        }
-    }
-    else {
-        prompt("not a valid weapon of choice");
+    if (computerChoice <= .3333) {
+        computerChoice = rock;
+        console.log("The computer chose rock");
+    } else if (computerChoice <= .6666) {
+        computerChoice = paper;
+        console.log("The computer chose paper");
+    } else if (computerChoice <= .9999) {
+        computerChoice = scissors;
+        console.log("The computer chose scissors");
     }
 };
-console.log("The computer chose " + computerChoice + " and ");
-console.log(compare());
+var userChoiceFn = function (userChoice, computerChoice) {
+    console.log("Starting");
+    computerChoiceFn();
+    console.log("Comparing...");
+    if (userChoice === computerChoice) {
+        console.log("the result is a tie!", computerChoice);
+    }
 
-/*
-What if a user makes an inappropriate choice like 'dog'? 
-How can we extend the function to handle that?
+    else if (userChoice === rock) {
+        if (computerChoice === scissors) {
+            console.log("rock crushes scissors, you wins");
+        }
+        else if (computerChoice === paper) {
+            console.log("paper cushions rock, the computer wins");
+        }
+    }
 
-What if players in the game could also choose 
-Rope in this game?
-
-In this version, if both players make the same choice, 
-the game returns a tie. What if the game didn't end 
-there but instead asked both players for new choices?
-*/
+    else if (userChoice === paper) {
+        if (computerChoice === rock) {
+            console.log("paper cushions rock, you win");
+        }
+        else if (computerChoice === scissors) {
+            console.log("scissors cut through paper, the computer win");
+        }
+    }
+};
 
 // GAME //
