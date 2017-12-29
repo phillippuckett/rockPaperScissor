@@ -16,54 +16,59 @@ $(document).ready(function (e) {
 });
 // VIEWS //
 
-
-
 // GAME //
 
-var rock;
-var paper;
-var scissors;
+var rock = "rock";
+var paper = "paper";
+var scissors = "scissors";
 
-var computerChoiceFn = function () {
+var fwah = function (userChoice, computerChoice) {
+
     var computerChoice = Math.random(0, 1);
     // console.log("The computer chose the number " + computerChoice);
 
     if (computerChoice <= .3333) {
         computerChoice = rock;
-        console.log("The computer chose rock");
     } else if (computerChoice <= .6666) {
         computerChoice = paper;
-        console.log("The computer chose paper");
     } else if (computerChoice <= .9999) {
         computerChoice = scissors;
-        console.log("The computer chose scissors");
     }
-};
-var userChoiceFn = function (userChoice, computerChoice) {
-    console.log("Starting");
-    computerChoiceFn();
-    console.log("Comparing...");
-    if (userChoice === computerChoice) {
-        console.log("the result is a tie!", computerChoice);
-    }
-
-    else if (userChoice === rock) {
+    console.log("The computer chose " + computerChoice);    
+    
+    if (userChoice === rock) {
+        console.log("You chose " + rock);
         if (computerChoice === scissors) {
-            console.log("rock crushes scissors, you wins");
+            console.log("rock crushes scissors, you win");
         }
         else if (computerChoice === paper) {
             console.log("paper cushions rock, the computer wins");
         }
     }
 
+    // PAPER //
     else if (userChoice === paper) {
+        console.log("You chose " + paper);
         if (computerChoice === rock) {
             console.log("paper cushions rock, you win");
         }
         else if (computerChoice === scissors) {
-            console.log("scissors cut through paper, the computer win");
+            console.log("scissors cut through paper, the computer wins");
         }
     }
-};
 
+    // SCISSORS //
+    else if (userChoice === scissors) {
+        console.log("You chose " + scissors);
+        if (computerChoice === rock) {
+            console.log("rock crushes scissors, the computer wins");
+        }
+        else if (computerChoice === paper) {
+            console.log("scissors cut through paper, you win");
+        }
+    }
+    else if (userChoice === computerChoice) {
+        console.log("the result is a tie!", computerChoice);
+    }
+};
 // GAME //
