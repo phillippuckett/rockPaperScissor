@@ -26,7 +26,6 @@ var scissors = "scissors";
 var fwah = function (userChoice, computerChoice) {
 
     var computerChoice = Math.random(0, 1);
-    // console.log("The computer chose the number " + computerChoice);
 
     if (computerChoice <= .3333) {
         computerChoice = rock;
@@ -34,49 +33,41 @@ var fwah = function (userChoice, computerChoice) {
         computerChoice = paper;
     } else if (computerChoice <= .9999) {
         computerChoice = scissors;
-    }
-    // console.log("The computer chose " + computerChoice);    
-    
+    }    
 
-    // ROCK //
     if (userChoice === rock) {
-        // console.log("You chose " + rock);
         if (computerChoice === scissors) {
-            console.log("Rock crushes scissors, YOU WIN!");
+            alert("Rock crushes scissors, YOU WIN!");
         }
         else if (computerChoice === paper) {
-            console.log("Paper cushions rock, THE COMPUTER WINS!");
+            alert("Paper cushions rock, THE COMPUTER WINS!");
         }
         else if (userChoice === computerChoice) {
-            console.log("It's a TIE!");
+            alert("It's a TIE!");
         }
     }
 
-    // PAPER //
     else if (userChoice === paper) {
-        // console.log("You chose " + paper);
         if (computerChoice === rock) {
-            console.log("Paper cushions rock, YOU WIN!");
+            alert("Paper cushions rock, YOU WIN!");
         }
         else if (computerChoice === scissors) {
-            console.log("Scissors cut through paper, THE COMPUTER WINS!");
+            alert("Scissors cut through paper, THE COMPUTER WINS!");
         }
         else if (userChoice === computerChoice) {
-            console.log("TIE!");
+            alert("TIE!");
         }
     }
 
-    // SCISSORS //
     else if (userChoice === scissors) {
-        // console.log("You chose " + scissors);
         if (computerChoice === rock) {
-            console.log("Rock crushes scissors, THE COMPUTER WINS!");
+            alert("Rock crushes scissors, THE COMPUTER WINS!");
         }
         else if (computerChoice === paper) {
-            console.log("Scissors cut through paper, YOU WIN!");
+            alert("Scissors cut through paper, YOU WIN!");
         }
         else if (userChoice === computerChoice) {
-            console.log("TIE!");
+            alert("TIE!");
         }
     }
 };
